@@ -1,23 +1,10 @@
-p1.check
+
+
+.img-b
 {
-    color:blueviolet;
+  background-image: url(/images/img6.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
-
-.box {
-    width: 40%;
-    margin: 0 auto;
-    background: rgba(255,255,255,0.2);
-    padding: 35px;
-    border: 2px solid black;
-    border-radius: 20px/50px;
-    background-clip: padding-box;
-    text-align: center;
-  }
-
-  .Backimage
-  {
-background-image:url(./images/img2.jpg);
-height: 100%;
-background-position: center;
-background-size: cover;
-  }
