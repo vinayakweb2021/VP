@@ -173,7 +173,7 @@ cursor: pointer;
     text-align: center;
   }
 
-  /* @media only screen and (max-width:700px){
+  @media only screen and (max-width:700px){
     nav ul{
       width: 100%;
       background:linear-gradient(#ff54a2,#ff575a);
@@ -220,4 +220,4 @@ cursor: pointer;
     .col-1 h3{
       flex-basis: 15px;
     }
-  } */
+  }
