@@ -48,3 +48,9 @@
     background-size: contain;
     background-image: url(https://pbs.twimg.com/profile_images/725321660484583424/ArQ4fM3k.jpg);
    }
+
+   .user-name{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+  }
