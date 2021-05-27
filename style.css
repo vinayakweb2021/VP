@@ -13,3 +13,8 @@ p1.check
     background-clip: padding-box;
     text-align: center;
   }
+
+  .Backimage
+  {
+background-image: url(./images/img.jpg);
+  }
