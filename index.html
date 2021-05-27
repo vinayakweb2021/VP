@@ -1,27 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css" >
     <title>Document</title>
 </head>
-<body class="img-b">
+<body>
+<div class="Container">
+    <div class="navbar">
+<img src="images/logo.png" class="logo" > 
+<nav>
+    <ul id="menulist"> 
+        <li><a href="">Meny otjeretsdfdsg</a></li>
+        <li><a href="">Good</a></li>
+        <li><a href="">Good</a></li>
+        <li><a href="">Good</a></li>
+    </ul>
+</nav>
+<img src="images/menu.png" class="Menu-icon" onclick="togglemenu()">
 
-    <!-- <div>
-        <span class="user-icon" ></span>
-        <div class="user-name" >Gilfoyle</div>
-    </div> -->
+     </div>
 
-    <div  style="text-align:center">
-        <span>Short text</span><br />
-        <span>This is long text</span>
-    </div>
+<div class="row" >
+   <div class="col-1">
+<h2>PS4 V@</h2>
+<h3>abcd</h3>
+<p>(kjjgiuhvregvregrg)</p>
+<h4>$34.46</h4>
+<button type="button">Buy Now<img src="images/arrow.png">
+</button>
+</div>
 
-    <div style="text-align:center" class="right" >
-        <span>Short text</span><br />
-        <span>This is long text</span>
-    </div>
- 
+    <div class="col-2">
+<img src="images/controller.png" class="controller" >
+      <div class="color-box">
+      </div>
+          <div class="add-btn">
+<img src="images/add.png" >
+<p><small>Add to Cart</small></p>
+        </div>
+   </div>
+</div>
+
+<div class="social_Links" >
+<img src="images/fb.png">
+<img src="images/tw.png">
+<img src="images/ig.png">
+</div>
+
+</div>
+
+<script>
+    var menulist = document.getElementById("menulist");
+
+    menulist.style.maxHeight = "0px";
+
+    function togglemenu(){
+        if(menulist.style.maxHeight == "0px")
+        {
+            menulist.style.maxHeight = "130px"
+        }
+        else
+        {
+            menulist.style.maxHeight = "0px"
+        }
+    }
+    
+
+</script>
 </body>
 </html>
