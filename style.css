@@ -1,14 +1,13 @@
 
 
-@media only screen and (max-width: 600px)
-{
+
   .img-b
    {
-  background-image: url(./images/img3.jpg);
+  background-image: url(./images/img4.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
    }
-}
+  
