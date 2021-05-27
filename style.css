@@ -16,5 +16,8 @@ p1.check
 
   .Backimage
   {
-background-image: url(./images/img.jpg);
+background-image:url(./images/img2.jpg);
+height: 100%;
+background-position: center;
+background-size: cover;
   }
