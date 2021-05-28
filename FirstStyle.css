@@ -3,15 +3,6 @@
 * {
 	box-sizing: border-box;
 }
-body {
-    font-family: Arial, sans-serif;
-    /* background: url(./images/back1.jpg) no-repeat; */
-    background-size: cover;
-    height: 100vh;
-       background-position: center center;
-      background-attachment: fixed;
-      background-repeat: no-repeat; background-size: cover;
-  }
 
 @property --angle {
   syntax: '<angle>';
@@ -31,7 +22,7 @@ body {
   inherits: true;
 }
 
-/* body {
+body {
 	font-family: Raleway, sans-serif;
 	text-align: center;
 	margin: 0;
@@ -43,7 +34,7 @@ body {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-} */
+}
 
 p {
 	margin: 0;
@@ -106,15 +97,4 @@ p {
 }
 
 
-@media (max-width: 480px) {
-    body {
-        background-image: url(./images/img.jpg);
-    }
-  
-  }
-  
-  @media (min-width: 1025px) {
-    body {
-      background-image: url(./images/img.jpg);
-   }
   
