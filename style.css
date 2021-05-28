@@ -23,7 +23,7 @@
 
 .logo
 {
-  width: 100px;
+  width: 65px;
   cursor: pointer;
   margin: 30px 0;
 }
@@ -138,7 +138,7 @@ nav ul li a:hover{
     align-items: center;
   }
   .controller{
-    width: 90%;
+    width: 100%;
   }
   .color-box{
     position: absolute;
@@ -206,7 +206,7 @@ cursor: pointer;
       margin-bottom: 50px;
     }
     .col-2 .controller{
-      width: 77%;
+      width: 85%;
     }
     .color-box{
       transform: translateX(75px);
