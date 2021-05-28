@@ -13,6 +13,3 @@ function togglemenu(){
     }
 }
 
-function click1(){
-   location.href="First.html";
-}
