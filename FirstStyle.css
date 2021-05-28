@@ -4,13 +4,11 @@
     font-family: sans-serif;
 }
 
-.firstback-img{
-height: 100vh;
-background-image: url(./images/img3.jpg);
-background-position: center;
-background-size: cover;
-overflow: hidden;
-position: relative;
+body{
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; background-size: cover;
+    background-image: url(./images/img3.jpg);
 }
 
    /* @media only screen and (max-width:700px){
