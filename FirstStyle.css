@@ -11,7 +11,7 @@ body {
   h1 {
     text-align: center;
     font-family: Tahoma, Arial, sans-serif;
-    color: #06D85F;
+    color: white;
     margin: 80px 0;
   }
   
@@ -41,7 +41,7 @@ body {
   }
   
   .overlay {
-    position: fixed;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
