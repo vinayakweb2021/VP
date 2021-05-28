@@ -77,7 +77,7 @@ p {
 }
 
 @keyframes borderRotate {
-	100% {
+	10% {
 		--angle: 420deg;
 	}
 }
