@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<style>
+p.pay-button1 {
+    padding: 10px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center ;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.bank-statement2 {
+    width: 99.5%;
+    background-color: blue;
+    margin-top: 18px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 0px 0px #fff;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.bank-statement1 img {
+    width: 3%;
+    margin-top: -4px;
+    margin-left: 8%;
+}
+.bank-statement1 {
+    display: flex;
+    flex-direction: row;
+}
+p.bank-name {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 10px;
+}
+input#myCheck {
+    margin-top: 10px;
+}
+.bank-statement {
+    width: 97%;
+    background-color: #ddd;
+    margin-top: 5px;
+    margin-left: 9px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 0px 0px 0px #fff;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 99%;
+}
+.pay-lines {
+    display: inline-block;
+    width: 100%;
+    background-color: blue;
+}
+.close {
+    color: #fff;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 12px;
+    margin-top: 6px;
+}
+p.pay-button {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    color: #fff;
+}
+
+/* The Close Button */
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+.column {
+  float: left;
+  width: 23%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+p.buy-buttons {
+    display: flex;
+    flex-direction: row;
+}
+button.buy-amount {
+    background-color: brown;
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .column {
+    float: left;
+    width: 100%;
+    padding: 0 0px;
+}
+.bank-statement {
+    width: 91%;
+    background-color: #ddd;
+    margin-top: 5px;
+    margin-left: 9px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 0px 0px 0px #fff;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.bank-statement1 img {
+    width: 11%;
+    margin-top: -4px;
+    margin-left: 8%;
+}
+.bank-field {
+    display: flex;
+    flex-direction: column;
+}
+label.name-field {
+    margin-top: 10px;
+}
+.name-field1 {
+    padding: 5px;
+    margin-top: 5px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 52px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+input.name-field2 {
+    padding: 9px;
+    margin-top: 10px;
+    background-color: dimgrey;
+    color: #fff;
+}
+}
+</style>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+  <!-- <a href="#home" class="active">Home</a> -->
+  <!-- <a href="#news">News</a> -->
+  <!-- <a href="#contact">Contact</a> -->
+  <!-- <a href="#about">About</a> -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<h2 style="text-align:center">Product Card</h2>
+<!-- <div class="row"> -->
+    <!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/smiling-tattooed-bearded-trendy-muslim-guy-sitting-cafe-morning-having-peasant-conversation-with-his-friend-mobile-phone_232070-7905.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			   <button class="open-button buy-amount" id="myBtn" onclick="openForm()">Buy Now</button>
+		   <!-- </p> -->
+        <!-- </div> -->
+	<!-- </div> -->
+	<!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/cheerful-man-holding-orange-juice-right-hand-surfing-internet_232070-7079.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			 <!-- <button class="open-button buy-amount" onclick="openForm()">Buy Now</button> -->
+		
+		   <!-- </p> -->
+	
+        <!-- </div> -->
+	<!-- </div> -->
+	<!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/smiling-tattooed-bearded-trendy-muslim-guy-sitting-cafe-morning-having-peasant-conversation-with-his-friend-mobile-phone_232070-7905.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			 <!-- <button class="buy-amount">Buy Now</button> -->
+		   <!-- </p> -->
+        <!-- </div> -->
+	<!-- </div> -->
+	<!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/cheerful-man-holding-orange-juice-right-hand-surfing-internet_232070-7079.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			 <!-- <button class="buy-amount">Buy Now</button> -->
+		   <!-- </p> -->
+        <!-- </div> -->
+	<!-- </div> -->
+	
+<div id="myModal" class="modal">
+  <div class="modal-content">
+  <div class="pay-lines">
+    <span class="close">&times;</span>
+    <p class="pay-button">Payment</p>
+   </div>
+   <div class="bank-statement">
+     <div class="bank-statement1">
+       
+       <input type="checkbox" id="myCheck" onclick="myFunction()">
+       <p class="bank-name">STATE BANK OF INDIA</p>
+       
+   </div>
+   <div id="text" style="display:none">
+   <div class="bank-field">
+       <label class="name-field" for="fname">Card No:</label>
+       <input class="name-field1" type="text" id="fname" name="fname" value="Card No">
+       <label class="name-field"  for="lname">End Date:</label>
+       <input class="name-field1" type="text" id="lname" name="lname" value="End date">
+	   <label class="name-field"  for="lname">CVV:</label>
+       <input type="text" class="name-field1" id="lname" name="lname" value="Cvv">
+       <input class="name-field2" type="submit" value="Submit">
+   </div>
+</div>
+  </div>
+  
+  
+  <div class="bank-statement">
+     <div class="bank-statement1">
+       
+       <input type="checkbox" id="myCheck" onclick="myFunction()">
+       <p class="bank-name">Phone Pay</p>
+        <img src="data:image/jpeg;base64,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" alt="Denim Jeans" style="">
+    </div>
+ </div>
+  
+  
+  <div class="bank-statement">
+     <div class="bank-statement1">
+       
+       <input type="checkbox" id="myCheck" onclick="myFunction()">
+       <p class="bank-name">Google Pay</p>
+        <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Google-Pay-Logo-Icon-PNG-715x714.png" alt="Denim Jeans" style="">
+    </div>
+ </div>
+  
+  <div class="bank-statement2">
+     <div class="bank-statement3">
+      <p class="pay-button1">BUY</p>
+       
+    </div>
+ </div>
+</div>
+</div>
+	  
+<!-- <div class="row"> -->
+    <!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/smiling-tattooed-bearded-trendy-muslim-guy-sitting-cafe-morning-having-peasant-conversation-with-his-friend-mobile-phone_232070-7905.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			   <!-- <button class="open-button buy-amount" id="myBtn" onclick="openForm()">Buy Now</button> -->
+		   <!-- </p> -->
+        <!-- </div> -->
+	<!-- </div> -->
+	<!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/cheerful-man-holding-orange-juice-right-hand-surfing-internet_232070-7079.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			 <!-- <button class="open-button buy-amount" onclick="openForm()">Buy Now</button> -->
+		
+		   <!-- </p> -->
+	
+        <!-- </div> -->
+	<!-- </div> -->
+	<!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/smiling-tattooed-bearded-trendy-muslim-guy-sitting-cafe-morning-having-peasant-conversation-with-his-friend-mobile-phone_232070-7905.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			 <!-- <button class="buy-amount">Buy Now</button> -->
+		   <!-- </p> -->
+        <!-- </div> -->
+	<!-- </div> -->
+	<!-- <div class="column"> -->
+	    <!-- <div class="card"> -->
+           <!-- <img src="https://image.freepik.com/free-photo/cheerful-man-holding-orange-juice-right-hand-surfing-internet_232070-7079.jpg" alt="Denim Jeans" style="width:100%"> -->
+           <!-- <h1>Tailored Jeans</h1> -->
+           <!-- <p class="price">$19.99</p> -->
+           <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
+           <!-- <p class="buy-buttons"> -->
+		     <!-- <button>Add to Cart</button> -->
+			 <!-- <button class="buy-amount">Buy Now</button> -->
+		   <!-- </p> -->
+        <!-- </div> -->
+	<!-- </div> -->
+	
+<div id="myModal" class="modal">
+  <div class="modal-content">
+  <div class="pay-lines">
+    <span class="close">&times;</span>
+    <p class="pay-button">Payment</p>
+   </div>
+   <div class="bank-statement">
+     <div class="bank-statement1">
+       
+       <input type="checkbox" id="myCheck" onclick="myFunction()">
+       <p class="bank-name">STATE BANK OF INDIA</p>
+       
+   </div>
+   <div id="text" style="display:none">
+   <div class="bank-field">
+       <label class="name-field" for="fname">Card No:</label>
+       <input class="name-field1" type="text" id="fname" name="fname" value="Card No">
+       <label class="name-field"  for="lname">End Date:</label>
+       <input class="name-field1" type="text" id="lname" name="lname" value="End date">
+	   <label class="name-field"  for="lname">CVV:</label>
+       <input type="text" class="name-field1" id="lname" name="lname" value="Cvv">
+       <input class="name-field2" type="submit" value="Submit">
+   </div>
+</div>
+  </div>
+  
+  
+  <div class="bank-statement">
+     <div class="bank-statement1">
+       
+       <input type="checkbox" id="myCheck" onclick="myFunction()">
+       <p class="bank-name">Phone Pay</p>
+        <img src="data:image/jpeg;base64,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" alt="Denim Jeans" style="">
+    </div>
+ </div>
+  
+  
+  <div class="bank-statement">
+     <div class="bank-statement1">
+       
+       <input type="checkbox" id="myCheck" onclick="myFunction()">
+       <p class="bank-name">Google Pay</p>
+        <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Google-Pay-Logo-Icon-PNG-715x714.png" alt="Denim Jeans" style="">
+    </div>
+ </div>
+  
+  <div class="bank-statement2">
+     <div class="bank-statement3">
+      <p class="pay-button1">BUY</p>
+       
+    </div>
+ </div>
+</div>
+</div>
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
+
