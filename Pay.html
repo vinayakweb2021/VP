@@ -130,6 +130,7 @@ p.pay-button {
 .row {margin: 0 -5px;}
 
 
+
 .row:after {
   content: "";
   display: table;
@@ -148,6 +149,20 @@ p.pay-button {
   font-size: 22px;
 }
 
+.container { 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .card button {
   border: none;
   outline: 0;
@@ -252,6 +267,8 @@ label.name-field {
     padding: 5px;
     margin-top: 5px;
 }
+
+
 .modal {
     display: none;
     position: fixed;
@@ -285,7 +302,7 @@ input.name-field2 {
   </a>
 </div>
 
-<h2 style="text-align:center">Product Card</h2>
+<h2 style="text-align:center">Ida Nod Pallu Ma Click Mad</h2>
 <!-- <div class="row"> -->
     <!-- <div class="column"> -->
 	    <!-- <div class="card"> -->
@@ -295,7 +312,15 @@ input.name-field2 {
            <!-- <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p> -->
            <!-- <p class="buy-buttons"> -->
 		     <!-- <button>Add to Cart</button> -->
-			   <button class="open-button buy-amount" id="myBtn" onclick="openForm()">Buy Now</button>
+			   <!-- <button class="btnStyle" id="myBtn" onclick="openForm()">Buy Now</button> -->
+
+               <div class="container">
+                <div class="center">
+                  <button style="height:70px;width:200px" id="myBtn"onclick="openForm()">Buy Now</button>
+                </div>
+              </div>
+
+               
 		   <!-- </p> -->
         <!-- </div> -->
 	<!-- </div> -->
@@ -386,8 +411,13 @@ input.name-field2 {
   
   <div class="bank-statement2">
      <div class="bank-statement3">
-      <p class="pay-button1">BUY</p>
-       
+      <p class="pay-button1" onclick="PayMesg();" >BUY</p>
+      
+      <script>
+        function PayMesg() {
+          alert("Ni asta saak Chinna Yenu Beda Nanga!");
+        }
+        </script>
     </div>
  </div>
 </div>
