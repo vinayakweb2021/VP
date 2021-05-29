@@ -4,6 +4,10 @@
     font-family: Audiowide;
 }
 
+body{
+    background-color: black;
+}
+
 .img-area{
     display: flex;
     justify-content: center;
